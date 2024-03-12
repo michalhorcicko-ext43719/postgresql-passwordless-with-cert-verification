@@ -1,9 +1,6 @@
 server:
   port: 8080
-  forward-headers-strategy: NONE
 spring:
-  main:
-    banner-mode: "off"
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:postgresql://<postgres-server>:5432/<database>?sslmode=verify-full&sslrootcert=/postgresql.crt
@@ -12,13 +9,3 @@ spring:
     username: <UAMI-name>
     azure:
       passwordless-enabled: true
-    hikari:
-      connectionTimeout: 5000
-logging:
-  level:
-    root: ERROR
-management:
-  endpoint:
-    health:
-      probes:
-        enabled: true
